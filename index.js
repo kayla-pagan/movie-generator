@@ -55,12 +55,15 @@ function appendToMovieContainer(data) {
 }
 
 function getApiData(){
-    fetch(`https://www.omdbapi.com/?s=${searchInput.value}&type=movie&plot=short&apikey=d3f6225`).then(res => {
-        throw Error('Something went wrong!')
-        return res.json()
-    })
-    .then(data => {
-            let results = data.Search
+    fetch(`https://www.omdbapi.com/?s=${searchInput.value}&type=movie&plot=short&apikey=d3f6225`)
+        .then(res => {
+            if(!res.ok){
+                throw Error('Something went wrong!')  
+              }
+              return res.json()
+        })
+        .then(data => {
+                let results = data.Search
             
             results.map(result => {
                     fetch(`https://www.omdbapi.com/?t=${result.Title}&type=movie&plot=short&apikey=d3f6225`)
@@ -69,12 +72,12 @@ function getApiData(){
                             appendToMovieContainer(data)    
                     })
             })
-    })
-    .catch(err => {
-        exploreAndErrorSection.classList.remove('d-none')
-        exploreAndErrorSection.innerHTML = `
-        <h2>Unable to find what you’re looking for. Please try another search.</h2>`       
-    })
+        })
+        .catch(err => {
+            exploreAndErrorSection.classList.remove('d-none')
+            exploreAndErrorSection.innerHTML = `
+            <h2>Unable to find what you’re looking for. Please try another search.</h2>`       
+        })
 }
 
 searchBtn.addEventListener('click', () => {
