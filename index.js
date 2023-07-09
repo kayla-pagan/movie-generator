@@ -55,7 +55,10 @@ function appendToMovieContainer(data) {
 }
 
 function getApiData(){
-    fetch(`https://www.omdbapi.com/?s=${searchInput.value}&type=movie&plot=short&apikey=d3f6225`).then(res => res.json())
+    fetch(`https://www.omdbapi.com/?s=${searchInput.value}&type=movie&plot=short&apikey=d3f6225`).then(res => {
+        throw Error('Something went wrong!')
+        return res.json()
+    })
     .then(data => {
             let results = data.Search
             

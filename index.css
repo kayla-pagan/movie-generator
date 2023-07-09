@@ -40,7 +40,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.125rem;
+    font-size: 1.125em;
     color: #DFDDDD;
 }
 
@@ -99,8 +99,7 @@ header button {
 }
 
 section {
-    margin-top: 2em;
-    height: 60vh;
+    height: 66vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -212,7 +211,7 @@ li p {
 
 @media(min-width: 620px) {
     h1 {
-        font-size: 2.686rem;
+        font-size: 2rem;
         padding-right: 1.2em;
     }
     
