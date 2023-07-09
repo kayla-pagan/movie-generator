@@ -1,0 +1,40 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <!-- CSS -->
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <header class="flex flex-column align-center">
+            <div class="flex align-center">
+                <h1>Find your film</h1>
+                <h4>
+                    <a href="./watchlist.html">My Watchlist</a>
+                </h4>
+            </div>
+            
+            <div class="search-container flex align-center">
+                <input id="search-input" placeholder="Search for a movie" type="text">
+                <button id="search-btn" class="flex justify-center align-center">Search</button>
+            </div>
+        </header>
+        
+        <section id="explore-and-error-section">
+            <div class="explore">
+                    <img src="./img/movie-icon.svg" alt="">
+                    <h2>Start exploring</h2>
+            </div>
+        </section>
+        
+        <main id="main" class="flex flex-column justify-center align-center">
+            <ul id="movie-container" class="flex flex-column justify-center align-center d-none">
+                <!-- rendered by JS -->
+            </ul>
+        </main>
+        
+        <script src="index.js" type="module"></script>
+    </body>
+</html>
