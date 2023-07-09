@@ -98,6 +98,11 @@ header button {
     color: #374151;
 }
 
+header button:hover {
+    background-color: #363636;
+    color: #fff;
+}
+
 section {
     height: 66vh;
     display: flex;
