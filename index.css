@@ -40,7 +40,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.125em;
+    font-size: 1.125rem;
     color: #DFDDDD;
 }
 
@@ -99,7 +99,8 @@ header button {
 }
 
 section {
-    height: 66vh;
+    margin-top: 2em;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
